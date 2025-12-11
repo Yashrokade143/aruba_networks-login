@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Candidate Assignment</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  
+<nav class="navbar">
+  <div class="nav-left">WELCOME TO AURUBA NETWORK</div>
+
+  <div class="nav-right">
+    <img src="Image/image.png" class="nav-logo" alt="App Logo">
+  </div>
+</nav>
+
+
+  <main class="container">
+    <div class="card">
+      <h1>Welcome!</h1>
+      <p class="muted">Sign in to continue to the application</p>
+
+      <form id="loginForm" novalidate>
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" name="password" type="password" placeholder="••••••••" minlength="6" required>
+
+        <div class="row between">
+          <label class="checkbox"><input id="remember" type="checkbox"> Remember me</label>
+          <a class="link" href="signup.html">Create account</a>
+        </div>
+
+        <div id="loginError" class="error" aria-live="polite"></div>
+
+        <button type="submit" class="btn">Sign in</button>
+      </form>
+    </div>
+    
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

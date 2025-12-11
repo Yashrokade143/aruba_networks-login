@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Signup — Candidate Assignment</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1>Create your account</h1>
+      <p class="muted">Join — simple, fast signup with validations</p>
+
+      <form id="signupForm" novalidate>
+        <label for="fullName">Full name</label>
+        <input id="fullName" name="name" type="text" placeholder="Your full name" required>
+
+        <label for="signupEmail">Email</label>
+        <input id="signupEmail" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" pattern="\+?[0-9 \-]{7,20}">
+
+        <label for="signupPassword">Password</label>
+        <input id="signupPassword" name="password" type="password" placeholder="Min 6 characters" minlength="6" required>
+
+        <label for="confirmPassword">Confirm password</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password" minlength="6" required>
+
+        <div id="signupError" class="error" aria-live="polite"></div>
+
+        <button type="submit" class="btn">Create account</button>
+      </form>
+
+      <p class="muted small">Already have an account? <a class="link" href="index.html">Sign in</a></p>
+    </div>
+    <footer class="attribution">Clean code, comments included — Good luck!</footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

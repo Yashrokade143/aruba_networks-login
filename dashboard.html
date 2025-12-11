@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1 id="welcomeTitle">WELCOME TO AUROBA NETWORK</h1>
+      <p class="muted">You have logged in successfully.</p>
+
+      <h3>Your Profile Details</h3>
+      <div class="user-details">
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="profilePhone"></span></p>
+      </div>
+
+      <button class="btn" id="logoutBtn">Logout</button>
+    </div>
+  </main>
+
+  <script>
+    
+    const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+    if (!loggedUser) {
+      window.location.href = "index.html";
+    }
+
+    document.getElementById("profileName").textContent = loggedUser.name;
+    document.getElementById("profileEmail").textContent = loggedUser.email;
+    document.getElementById("profilePhone").textContent = loggedUser.phone || "Not provided";
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("loggedUser");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
