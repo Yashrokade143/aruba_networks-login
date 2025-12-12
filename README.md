@@ -1,2 +1,2 @@
-# fix redme and bold....
-# this is the helping for people
+# My name is Yash
+# kay bolte bhai  ho gay sab add!!
